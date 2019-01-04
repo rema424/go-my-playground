@@ -1,0 +1,45 @@
+version: '3'
+services:
+  app:
+    build: .
+    working_dir: /go/src/app
+    command: bash
+    # command: go run main.go
+    # command: dlv debug --headless --listen=:2345 --api-version=2
+    volumes:
+      - ./src/app:/go/src/app
+    ports:
+      - 8080:8080 # AppEngine default
+      - 3000:3000 # gin
+      - 2345:2345 # debug
+    # security_opt:
+    #   - apparmor:unconfined
+    # cap_add:
+    #   - SYS_PTRACE
+    tty: true
+    privileged: true
+    # depends_on:
+    #   - db
+  # gcloud:
+  #   build: gcloud
+  #   ports:
+  #     - 8000:8000
+  #     - 8080:8080
+  #   tty: true
+  #   privileged: true
+  # db:
+  #   image: mysql
+  #   ports:
+  #     - 3306:3306
+  #   # volumes:
+  #   #   - mydata:/var/lib/mysql
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: RootPassw0rd
+  #     MYSQL_DATABASE: testdb
+  #     MYSQL_USER: testuser
+  #     MYSQL_PASSWORD: Passw0rd
+  #     TZ: Asia/Tokyo
+  #   tty: true
+# volumes:
+#   mydata:
+#     driver: local
