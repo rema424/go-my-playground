@@ -1,3 +1,5 @@
+// v1: https://play.golang.org/p/Cna1ebb1OTh
+// v2: https://play.golang.org/p/uRWyxcyjteR
 package main
 
 import (
