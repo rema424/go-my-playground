@@ -44,4 +44,31 @@ func main() {
 
 	fmt.Println("Struct Pointer")
 	lib.TypeAsertion(&d4)
+
+	d5 := []User{
+		User{Name: "Michael", Age: 25},
+		User{Name: "Bob", Age: 26},
+	}
+
+	fmt.Println("Struct in Array")
+	lib.TypeAsertion(d5)
+
+	fmt.Println("Struct in Array Pointer")
+	lib.TypeAsertion(&d5)
+
+	d6 := 100
+
+	fmt.Println("Int")
+	lib.TypeAsertion(d6)
+
+	fmt.Println("Int Pointer")
+	lib.TypeAsertion(&d6)
+
+	d7 := "Apple"
+
+	fmt.Println("String")
+	lib.TypeAsertion(d7)
+
+	fmt.Println("Int Pointer")
+	lib.TypeAsertion(&d7)
 }
