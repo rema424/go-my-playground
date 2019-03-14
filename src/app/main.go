@@ -8,6 +8,11 @@ import (
 )
 
 func main() {
+	lib.ExampleScrape()
+	// reflectTest()
+}
+
+func reflectTest() {
 	d1 := map[string]interface{}{
 		"name": "Michael",
 		"age":  25,
@@ -73,4 +78,5 @@ func main() {
 
 	fmt.Println("Int Pointer")
 	lib.TypeAsertion(&d7)
+
 }
