@@ -3,12 +3,15 @@
 package main
 
 import (
-	"app/lib"
 	"fmt"
+
+	"github.com/rema424/go-my-playground/lib"
 )
 
 func main() {
-	lib.ExampleScrape()
+	lib.Robin()
+	fmt.Println("aaaa")
+	// lib.ExampleScrape()
 	// reflectTest()
 }
 
